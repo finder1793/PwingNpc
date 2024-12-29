@@ -1,0 +1,35 @@
+# Gradle
+.gradle/
+build/
+gradle-app.setting
+!gradle-wrapper.jar
+!gradle-wrapper.properties
+
+# IDE - IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# IDE - Eclipse
+.classpath
+.project
+.settings/
+bin/
+
+# IDE - VSCode
+.vscode/
+
+# Minecraft Development
+run/
+
+# Java
+*.class
+*.log
+*.jar
+hs_err_pid*
+
+# OS specific
+.DS_Store
+Thumbs.db

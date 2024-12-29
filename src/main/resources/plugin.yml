@@ -1,0 +1,5 @@
+name: PwingNpc
+version: '${version}'
+main: net.pwing.npc.PwingNpc
+api-version: '1.20'
+description: Robust Packet NPC plugin with No BS
