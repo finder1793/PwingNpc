@@ -1,5 +1,17 @@
 name: PwingNpc
-version: '${version}'
+version: '${project.version}'
 main: net.pwing.npc.PwingNpc
 api-version: '1.20'
 description: Robust Packet NPC plugin with No BS
+author: Pwing
+commands:
+  npc:
+    description: Main command for PwingNpc
+    usage: /<command>
+    permission: pwingnpc.admin
+    aliases: [npcs]
+
+permissions:
+  pwingnpc.admin:
+    description: Allows access to all NPC commands
+    default: op

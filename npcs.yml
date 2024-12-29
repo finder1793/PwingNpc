@@ -1,0 +1,10 @@
+npcs:
+  example-npc:
+    traits:
+      movement:
+        pathfinding: true
+        speed: 0.2
+      skin:
+        skin-name: "Notch"
+        value: "..."
+        signature: "..."
