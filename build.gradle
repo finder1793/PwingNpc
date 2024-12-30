@@ -13,20 +13,22 @@ repositories {
     maven { url 'https://jitpack.io' }
     maven { url 'https://repo.citizensnpcs.co/' }
     maven { url 'https://repo.dmulloy2.net/repository/public/' }
+    maven { url 'https://repo.codemc.org/repository/maven-public/' }
 }
 dependencies {
     compileOnly 'org.spigotmc:spigot-api:1.19.4-R0.1-SNAPSHOT'
     compileOnly 'net.citizensnpcs:citizensapi:2.0.37-SNAPSHOT'
-    implementation 'com.github.retrooper.packetevents:spigot:2.0.0'
+    implementation 'com.github.retrooper:packetevents-api:2.6.0'
+    implementation 'com.github.retrooper:packetevents-spigot:2.6.0'
     
-    shadow 'com.github.retrooper.packetevents:spigot:2.0.0'
+    shadow 'com.github.retrooper:packetevents-api:2.6.0'
 }
 tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
 }
 
 shadowJar {
-    relocate 'com.github.retrooper.packetevents', 'net.pwing.npc.visibility.libs.packetevents'
+    relocate 'com.github.retrooper.packetevents-api', 'net.pwing.npc.visibility.libs.packetevents-api'
 }
 
 build {
