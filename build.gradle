@@ -29,6 +29,7 @@ tasks.withType(JavaCompile) {
 
 shadowJar {
     relocate 'com.github.retrooper.packetevents-api', 'net.pwing.npc.visibility.libs.packetevents-api'
+    minimize() 
 }
 
 build {
