@@ -8,34 +8,23 @@ version = '1.0.0'
 
 repositories {
     mavenCentral()
-    maven {
-        name = 'papermc'
-        url = 'https://repo.papermc.io/repository/maven-public/'
-    }
-    maven {
-        name = 'spigot-repo'
-        url = 'https://hub.spigotmc.org/nexus/content/repositories/snapshots/'
-    }
-    maven {
-        name = 'jitpack'
-        url = 'https://jitpack.io'
-    }
-
-    maven {
-        name = 'jitpack'
-        url = 'https://repo.codemc.io/repository/maven-public/'
-    }
+    maven { url 'https://repo.papermc.io/repository/maven-public/' }
+    maven { url 'https://hub.spigotmc.org/nexus/content/repositories/snapshots/' }
+    maven { url 'https://jitpack.io' }
+    maven { url 'https://repo.citizensnpcs.co/' }
+    maven { url 'https://repo.dmulloy2.net/repository/public/' }
 }
-
 dependencies {
-    compileOnly 'io.papermc.paper:paper-api:1.20.1-R0.1-SNAPSHOT'
-    implementation 'com.github.retrooper.packetevents:spigot:2.0.2'
+    compileOnly 'org.spigotmc:spigot-api:1.19.4-R0.1-SNAPSHOT'
+    compileOnly 'net.citizensnpcs:citizensapi:2.0.37-SNAPSHOT'
+    implementation 'com.github.retrooper.packetevents:spigot:2.0.0'
+    
+    shadow 'com.github.retrooper.packetevents:spigot:2.0.0'
 }
-
 tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
 }
 
 shadowJar {
-    relocate 'com.github.retrooper.packetevents', 'net.pwing.npc.lib.packetevents'
+    relocate 'com.github.retrooper.packetevents', 'net.pwing.npc.visibility.libs.packetevents'
 }

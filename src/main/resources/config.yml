@@ -1,0 +1,17 @@
+# PwingVisibility Configuration
+settings:
+  # Should NPCs be visible by default?
+  default-visible: true
+  
+  # Default permission required to see NPCs (leave blank for none)
+  default-permission: ''
+  
+# Saved NPC visibility settings
+npcs:
+  # Format:
+  # npcId:
+  #   permission: 'custom.permission'
+  #   visible-by-default: true
+  #   visible-to:
+  #     - player-uuid-1
+  #     - player-uuid-2

@@ -1,0 +1,46 @@
+name: PwingVisibility
+version: '${version}'
+main: net.pwing.npc.visibility.PwingVisibilityPlugin
+api-version: '1.19'
+depend: [Citizens]
+commands:
+  npcvisibility:
+    description: Manage NPC visibility settings
+    usage: /npcvisibility <add|remove|permission|default> [args]
+    permission: pwingnpc.npc.manage
+  playerhider:
+    description: Manage player visibility settings
+    usage: /playerhider <group|hide|show> [args]
+    permission: pwingnpc.use
+
+permissions:
+  pwingnpc.npc.manage:
+    description: Allows managing NPC visibility
+    default: op
+  pwingnpc.hide.self:
+    description: Allows hiding yourself from other players
+    default: true
+  pwingnpc.hide.others:
+    description: Allows hiding other players
+    default: op
+  pwingnpc.show.self:
+    description: Allows showing yourself to other players
+    default: true
+  pwingnpc.show.others:
+    description: Allows showing other players
+    default: op
+  pwingnpc.group.create:
+    description: Allows creating visibility groups
+    default: op
+  pwingnpc.group.list:
+    description: Allows listing visibility groups
+    default: op
+  pwingnpc.group.add:
+    description: Allows adding players to visibility groups
+    default: op
+  pwingnpc.group.remove:
+    description: Allows removing players from visibility groups
+    default: op
+  pwingnpc.see.hidden:
+    description: Allows seeing hidden players
+    default: op
