@@ -17,7 +17,7 @@ repositories {
 dependencies {
     compileOnly 'org.spigotmc:spigot-api:1.19.4-R0.1-SNAPSHOT'
     compileOnly 'net.citizensnpcs:citizensapi:2.0.37-SNAPSHOT'
-    implementation 'com.github.retrooper.packetevents:spigot:2.0.0'
+    implementation 'com.github.retrooper.packetevents:spigot:2.0.2'
     
     shadow 'com.github.retrooper.packetevents:spigot:2.0.0'
 }

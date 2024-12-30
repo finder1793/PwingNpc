@@ -13,10 +13,13 @@ import net.pwing.npc.visibility.VisibilityCommand;
 import net.pwing.npc.visibility.player.PlayerHiderConfig;
 
 public class PwingVisibilityPlugin extends JavaPlugin {
-
     @Override
     public void onLoad() {
         PacketEvents.setAPI(SpigotPacketEventsBuilder.build(this));
+        PacketEvents.getAPI().getSettings()
+                .bStats(true)
+                .checkForUpdates(false)
+                .debug(false);
         PacketEvents.getAPI().load();
     }
     private VisibilityConfig visibilityConfig;
@@ -39,7 +42,7 @@ public class PwingVisibilityPlugin extends JavaPlugin {
         playerHiderConfig.loadGroups();
         getCommand("playerhider").setExecutor(new PlayerHiderCommand(playerHiderManager));
     }
-
+    
     public VisibilityConfig getVisibilityConfig() {
         return visibilityConfig;
     }
