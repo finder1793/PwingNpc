@@ -1,4 +1,4 @@
-# PwingNpc
+# PwingVisibilityManager
 Advanced visibility management system for Citizens NPCs and Players
 
 ## Features
